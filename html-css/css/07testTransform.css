@@ -1,0 +1,15 @@
+body {
+  height: 100vh;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+div {
+  height: 150px;
+  border: 1px solid black;
+  transform: scale(
+    2,
+    2
+  ); /* multiplie par deux la taille d'une image par exemple */
+  transform: rotate(0.5turn); /* Rotation de 180° */
+  transform: translate(120px, 50%);
+}

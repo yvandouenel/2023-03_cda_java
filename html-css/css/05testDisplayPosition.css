@@ -3,10 +3,10 @@
 
 img {
   display: block;
+  border-radius: 16px;
 }
 figure {
   position: relative;
-  border: 1px solid black;
   display: inline-block;
 }
 figcaption {
