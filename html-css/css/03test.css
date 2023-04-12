@@ -1,0 +1,42 @@
+/* En-tête */
+header {
+  color: blueviolet;
+}
+/* Sélection par descendance */
+header > nav > ul > li {
+  border: 1px solid black;
+}
+/* Groupement */
+header,
+footer {
+  border: 5px solid red;
+}
+/* Selecteur de classe */
+.menu {
+  color: brown;
+}
+/* Selecteur par identité */
+#link6 {
+  color: black;
+}
+/* Pseudo class */
+a:hover {
+  background-color: cadetblue;
+}
+nav ul li:nth-child(1) a {
+  background-color: black;
+  color: white;
+}
+/* Pseudo element */
+a:before {
+  content: "Lien : ";
+}
+a:after {
+  content: ".";
+}
+/* selection par attribut avec expression régulière */
+a[href*="qsdf"] {
+  border: 10px solid orange;
+}
+
+
