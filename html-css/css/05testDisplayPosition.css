@@ -1,22 +1,26 @@
 /* Display block par défaut pour les p, div, section, article, aside, header, footer, main ... */
 
+
+img {
+  display: block;
+}
 figure {
   position: relative;
   border: 1px solid black;
   display: inline-block;
 }
-img {
-  display: block;
-}
 figcaption {
   position: absolute;
   bottom: 0;
   left: 0;
+  /* z-index: -1; */
   background-color: rgba(0,0,0,0.5);
   color: white;
   width: 100%;
   padding: 20px;
-  /* Permet de ne pas compter le padding et le margin dans la largeur */
+  /* Permet de ne pas compter le padding et le border dans la largeur */
   box-sizing: border-box;
   text-align: center;
+  border: 3px dashed #CC0033;
+  margin: 20px 0;
 }
