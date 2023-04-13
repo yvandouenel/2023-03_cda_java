@@ -1,0 +1,32 @@
+main {
+  > section {
+    section.col {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+          margin: 0;
+          padding: 0;
+          article {
+            margin: 2rem 0;
+            padding: 1rem;
+            border-radius: 1em;
+            color: white !important;
+            button {
+              /* background-color: $warning; */
+              @include button-variant(
+                $warning,
+                $secondary,
+                $secondary,
+                $secondary,
+                $secondary,
+                $secondary
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+}
