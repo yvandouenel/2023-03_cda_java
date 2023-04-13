@@ -1,0 +1,28 @@
+* {
+  border: 1px solid black;
+}
+/* display: flex s'applique sur le container */
+.container {
+  border: 1px solid red;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  /* aligne sur l'axe principale */
+  justify-content: space-around;
+   /* aligne sur l'axe secondaire au sein d'une même ligne */
+  align-items: center;
+  flex-wrap: wrap;
+  /* utilisation de la propriété align-content pour gérer l'alignement sur l'axe secondaire entre les lignes */
+  align-content: space-around;
+  /* gap: 20px; */
+}
+
+
+/* propriétés qui s'applique à un élément qui se trouve dans un container flex */
+.container > div {
+  flex-basis: 25%;
+  box-sizing: border-box;
+}
+.container > div:nth-child(6){
+  /* align-self: flex-end; */
+}
