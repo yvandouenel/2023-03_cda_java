@@ -1,0 +1,12 @@
+/* Déclaration des Mixins avec paramètres */
+@mixin button($color: white, $bgcolor: $black) {
+  border-radius: 8px;
+  background-color: $bgcolor;
+  color: $color;
+  padding: 10px;
+  text-decoration: none;
+  &:hover {
+    background-color: darken($bgcolor, 20%);
+    color: $color;
+  }
+}

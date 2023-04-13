@@ -1,0 +1,18 @@
+/* Mise en page du header avec imbrication */
+header {
+  width: 80%;
+  margin: 0 auto;
+  nav {
+    ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      a {
+        /* Appel de la mixin  avec arguments*/
+        @include button(yellow);
+      }
+    }
+  }
+}

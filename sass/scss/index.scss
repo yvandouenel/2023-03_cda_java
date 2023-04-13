@@ -1,35 +1,8 @@
-/* Déclaration des Mixins avec paramètres */
-@mixin button($color: white, $bgcolor: black) {
-  border-radius: 8px;
-  background-color: $bgcolor;
-  color: $color;
-  padding: 10px;
-  text-decoration: none;
-  &:hover {
-    background-color: darken($bgcolor, 20%);
-    color: $color;
-  }
-}
-/* Mise en page du header avec imbrication */
-header {
-  width: 80%;
-  margin: 0 auto;
-  nav {
-    ul {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      a {
-        /* Appel de la mixin  avec arguments*/
-        @include button(orange, grey);
-      }
-    }
-  }
-}
-/* Mise en page du footer */
-footer {
-  width: 80%;
-  margin: 0 auto;
-}
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./header.scss";
+@import "./footer.scss";
+
+
+
+
