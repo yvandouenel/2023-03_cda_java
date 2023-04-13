@@ -1,13 +1,13 @@
-/* Déclaration des Mixins */
-@mixin button() {
+/* Déclaration des Mixins avec paramètres */
+@mixin button($color: white, $bgcolor: black) {
   border-radius: 8px;
-  background-color: black;
-  color: white;
+  background-color: $bgcolor;
+  color: $color;
   padding: 10px;
   text-decoration: none;
   &:hover {
-    background-color: darken(white, 20%);
-    color: black;
+    background-color: darken($bgcolor, 20%);
+    color: $color;
   }
 }
 /* Mise en page du header avec imbrication */
@@ -22,8 +22,8 @@ header {
       margin: 0;
       padding: 0;
       a {
-        /* Appel de la mixin */
-        @include button();
+        /* Appel de la mixin  avec arguments*/
+        @include button(orange, grey);
       }
     }
   }

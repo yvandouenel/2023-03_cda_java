@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Déclaration des Mixins */
+/* Déclaration des Mixins avec paramètres */
 /* Mise en page du header avec imbrication */
 header {
   width: 80%;
@@ -13,16 +13,16 @@ header nav ul {
   padding: 0;
 }
 header nav ul a {
-  /* Appel de la mixin */
+  /* Appel de la mixin  avec arguments*/
   border-radius: 8px;
-  background-color: black;
-  color: white;
+  background-color: grey;
+  color: orange;
   padding: 10px;
   text-decoration: none;
 }
 header nav ul a:hover {
-  background-color: #cccccc;
-  color: black;
+  background-color: #4d4d4d;
+  color: orange;
 }
 
 /* Mise en page du footer */
