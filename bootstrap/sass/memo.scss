@@ -15,6 +15,7 @@ main {
             color: white !important;
             button {
               /* background-color: $warning; */
+              /* Appels à une mixin de bootstrap */
               @include button-variant(
                 $warning,
                 $secondary,

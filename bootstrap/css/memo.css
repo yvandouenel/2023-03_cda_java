@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/* Attention pour réécrire les variables de bootstrap, il faut le faire 
+avant l'import de bootstrap */
+/* Import des scss de bootstrap */
 /*!
  * Bootstrap v5.0.2 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10746,6 +10749,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/* Import des mes scss custom */
 main > section section.col ul {
   margin: 0;
   padding: 0;
@@ -10763,6 +10767,7 @@ main > section section.col ul li article {
 }
 main > section section.col ul li article button {
   /* background-color: $warning; */
+  /* Appels à une mixin de bootstrap */
   color: #6c757d;
   background-color: #efefef;
   border-color: #6c757d;
