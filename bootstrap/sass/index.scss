@@ -1,0 +1,7 @@
+/* Attention pour réécrire les variables de bootstrap, il faut le faire 
+avant l'import de bootstrap */
+@import "./myVariables.scss";
+/* Import des scss de bootstrap */
+@import "../bootstrap/scss/bootstrap.scss";
+/* Import des mes scss custom */
+@import "./memo.scss";
