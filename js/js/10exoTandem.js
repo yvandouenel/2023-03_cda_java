@@ -26,6 +26,7 @@ class Bike {
  * Class Tandem hérite de Bike
  */
 class Tandem extends Bike {
+  // Déclaration d'une propriété de classe avec le mot clés "static"
   static seat_number = 2;
   // method overriding
   pedal() {
