@@ -21,7 +21,7 @@ Person.prototype.introduceMyself = function () {
   );
 };
 Person.prototype.specy = "Human";
-Object.prototype.specy = "Animal";
+//Object.prototype.specy = "Animal";
 
 /* instanciation via le mot clé new. C'est cette syntaxe qui permet de déclencher tous les mécanismes liés à la Programmation Orientéé Objet
 
@@ -39,3 +39,94 @@ function test() {}
 const t = new test();
 console.log(`t  : `, t);
 console.log(`t.specy  : `, t.specy);
+
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+}
+// objets littéraux (ou format json)qui ont largement remplacé le xml dans le cadre
+// des fichiers de config et les web services
+const filou = {
+  name: "filou",
+  race: "Batârd",
+};
+console.log(`filou.name`, filou.name);
+console.log(`filou["name"]`, filou["name"]);
+
+const regions = [
+  {
+    nom: "Île-de-France",
+    code: "11",
+  },
+  {
+    nom: "Centre-Val de Loire",
+    code: "24",
+  },
+  {
+    nom: "Bourgogne-Franche-Comté",
+    code: "27",
+  },
+  {
+    nom: "Normandie",
+    code: "28",
+  },
+  {
+    nom: "Hauts-de-France",
+    code: "32",
+  },
+  {
+    nom: "Grand Est",
+    code: "44",
+  },
+  {
+    nom: "Pays de la Loire",
+    code: "52",
+  },
+  {
+    nom: "Bretagne",
+    code: "53",
+  },
+  {
+    nom: "Nouvelle-Aquitaine",
+    code: "75",
+  },
+  {
+    nom: "Occitanie",
+    code: "76",
+  },
+  {
+    nom: "Auvergne-Rhône-Alpes",
+    code: "84",
+  },
+  {
+    nom: "Provence-Alpes-Côte d'Azur",
+    code: "93",
+  },
+  {
+    nom: "Corse",
+    code: "94",
+  },
+  {
+    nom: "Guadeloupe",
+    code: "01",
+  },
+  {
+    nom: "Martinique",
+    code: "02",
+  },
+  {
+    nom: "Guyane",
+    code: "03",
+  },
+  {
+    nom: "La Réunion",
+    code: "04",
+  },
+  {
+    nom: "Mayotte",
+    code: "06",
+  },
+];
+regions.sort((a, b) => a.code - b.code);
+console.log(`regions`, regions);

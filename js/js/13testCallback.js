@@ -9,9 +9,9 @@ function failed() {
  * @param {Callback} win
  * @param {Callback} loose
  */
-function playLoto(win, loose) {
-  if (Math.random() > 0.5) win();
-  else loose();
+function playLoto(s, f) {
+  if (Math.random() > 0.5) s();
+  else f();
 }
 
 playLoto(success, failed);
