@@ -58,6 +58,10 @@ const regions = [
   {
     nom: "Île-de-France",
     code: "11",
+    departements: [
+      { "petit nom": "Paris" },
+      { "petit nom": "Seine Saint Denis" },
+    ],
   },
   {
     nom: "Centre-Val de Loire",
@@ -128,5 +132,6 @@ const regions = [
     code: "06",
   },
 ];
-regions.sort((a, b) => a.code - b.code);
-console.log(`regions`, regions);
+/* regions.sort((a, b) => a.code - b.code);
+console.log(`regions`, regions); */
+console.log(regions[0].departements[1]["petit nom"]);
