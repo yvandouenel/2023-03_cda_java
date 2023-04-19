@@ -49,7 +49,7 @@ function createMarkup(markup_name, text, parent, attributes = []) {
 const header = createMarkup('header', "", document.body);
 const nav = createMarkup('nav', '', header);
 for (let i = 0; i < 4; i++) {
-  createMarkup('button', `Item ${i + 1}`, header, [{ name: "class", value: "danger" }, { name: "id", value: "danger" + i }]);
+  createMarkup('button', `Item ${i + 1}`, nav, [{ name: "class", value: "danger" }, { name: "id", value: "danger" + i }]);
 }
 document.querySelector("button").style.color = "red";
 
