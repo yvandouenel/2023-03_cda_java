@@ -11,6 +11,9 @@ class SlideShow {
 
     // Rendu
     this.render();
+
+    // Animation
+    this.animateSlideShow();
   }
   feedSlideshow() {
     // Création des images
@@ -27,7 +30,9 @@ class SlideShow {
   render() {
     const sectionSlideshow = this.createMarkup("section", "", document.body, [{ name: "id", value: "slideshow" }]);
     // Rendre les images visibles en les ajoutant à ma section d'id slideshow
-    this.images.forEach(image => {
+    this.images.forEach((image, index) => {
+      // seule la première image ne sera pas cachée (utilisation de hidden)
+      if (index != 0) image.hidden = true;
       sectionSlideshow.appendChild(image);
     })
 
@@ -43,6 +48,30 @@ class SlideShow {
     })
 
     return markup;
+  }
+
+
+  animateSlideShow() {
+
+    setInterval(() => {
+      // récupère l'index de l'image actuellement affichée et mettre hidden à true
+      let current_index_image = this.getCurrentImageIndex();
+      console.log(`current_index_image`, current_index_image);
+      // Récupère l'index de l'image qu'il va falloir afficher et mettre hidden à false
+      let next_index_image = (current_index_image + 1) % this.nb_images;
+      console.log(`next_index_image`, next_index_image);
+      this.images[current_index_image].hidden = true;
+      this.images[next_index_image].hidden = false;
+    }, this.speed);
+  }
+  getCurrentImageIndex() {
+    let current_index = 0;
+    this.images.forEach((image, index) => {
+      if (!image.hidden) {
+        current_index = index;
+      }
+    })
+    return current_index;
   }
 }
 const firstSlideshow = new SlideShow(6, 600, 400, 1000);
