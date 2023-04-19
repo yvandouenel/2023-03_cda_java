@@ -35,7 +35,7 @@ console.log(`Joe : `, joe);
 bob.introduceMyself();
 joe.introduceMyself();
 
-function test() {}
+function test() { }
 const t = new test();
 console.log(`t  : `, t);
 console.log(`t.specy  : `, t.specy);
@@ -135,3 +135,32 @@ const regions = [
 /* regions.sort((a, b) => a.code - b.code);
 console.log(`regions`, regions); */
 console.log(regions[0].departements[1]["petit nom"]);
+
+class Product {
+  // propriété privée. On ne pourra y accéder que via un get ou un set
+  #price;
+  #name;
+  constructor(name, price) {
+    this.#price = price;
+    this.#name = name;
+  }
+  get name() {
+    return this.#name;
+  }
+  set name(new_name) {
+    this.#name = new_name;
+  }
+  get price() {
+    //traitements éventuels ici (l'utilisateur courant a le droit de voir le prix ou il a un coeff spécifique, ...)
+    return this.#price;
+  }
+  set price(new_price) {
+    // traitemens éventuels ici
+    this.#price = new_price;
+  }
+}
+const p = new Product("Zyu4", 30);
+console.log("Nom et prix :", p.name, p.price);
+p.price = 100;
+console.log(p.price);
+
