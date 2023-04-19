@@ -56,7 +56,7 @@ class SlideShow {
     setInterval(() => {
       // récupère l'index de l'image actuellement affichée et mettre hidden à true
       let current_index_image = this.getCurrentImageIndex();
-      console.log(`current_index_image`, current_index_image);
+      //console.log(`current_index_image`, current_index_image);
       // Récupère l'index de l'image qu'il va falloir afficher et mettre hidden à false
       let next_index_image = (current_index_image + 1) % this.nb_images;
       console.log(`next_index_image`, next_index_image);
@@ -74,4 +74,4 @@ class SlideShow {
     return current_index;
   }
 }
-const firstSlideshow = new SlideShow(6, 600, 400, 1000);
+const firstSlideshow = new SlideShow(10, 1200, 800, 1500);
