@@ -19,3 +19,7 @@ export default function createMarkup(markup_name, text, parent, attributes = [])
 
   return markup;
 }
+
+export function test () {
+  console.log(`test`);
+}

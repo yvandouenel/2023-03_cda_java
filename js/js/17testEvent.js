@@ -1,4 +1,4 @@
-import createMarkup from "./utils/utils.js";
+import createMarkup, { test } from "./utils/utils.js";
 
 const btn = document.querySelector("button");
 const a = document.querySelector("a");
@@ -10,4 +10,5 @@ function manageBtnClick(event) {
   console.log(`clic sur le bouton`);
   createMarkup("p", "Lorem ipsum ....", document.body);
 }
+test();
 
