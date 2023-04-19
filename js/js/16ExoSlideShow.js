@@ -35,7 +35,7 @@ class SlideShow {
       if (index != 0) image.hidden = true;
       sectionSlideshow.appendChild(image);
     })
-
+    console.log(`this`, this);
   }
   createMarkup(markup_name, text, parent, attributes = []) {
     const markup = document.createElement(markup_name);
@@ -49,8 +49,6 @@ class SlideShow {
 
     return markup;
   }
-
-
   animateSlideShow() {
 
     setInterval(() => {
