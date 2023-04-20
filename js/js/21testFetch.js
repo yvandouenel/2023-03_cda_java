@@ -1,13 +1,15 @@
 import createMarkup from "./utils/utils.js";
 const form = document.querySelector("form");
+let universities = [];
 
-form.onsubmit = function (e) {
+form.onsubmit = async function (e) {
   console.log(`Dans onsubmit`);
   e.preventDefault();
   let country = document.querySelector("#country").value;
   console.log(`country`, country);
   // appel du endpoint via fetch
-  getUniversities(country);
+  universities = await getUniversities(country);
+  console.log(`contenu universities : `, universities);
 }
 
 function getUniversities(country) {
@@ -17,7 +19,10 @@ function getUniversities(country) {
         throw new Error("Le serveur ne répond pas !");
       } else return response.json();
     })
-    .then((data) => console.log(`contenu du resolve de la promesse : `, data))
+    .then((univs) => {
+      
+      return univs;
+    })
     .catch((error) => console.log(`Erreure attrapée : `, error));
 }
 
