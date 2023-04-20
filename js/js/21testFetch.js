@@ -1,6 +1,9 @@
 import createMarkup from "./utils/utils.js";
+import University from "./classes/University.js";
+
 const form = document.querySelector("form");
 let universities = [];
+let section_univ = document.querySelector("#universities");
 
 form.onsubmit = async function (e) {
   console.log(`Dans onsubmit`);
@@ -9,7 +12,11 @@ form.onsubmit = async function (e) {
   console.log(`country`, country);
   // appel du endpoint via fetch
   universities = await getUniversities(country);
-  console.log(`contenu universities : `, universities);
+  // On vide tous les éléments qui seraient déjà dans la section universities
+  section_univ.innerHTML = "";
+  universities.forEach(univ => {
+    new University(univ.name, univ.web_pages);
+  })
 }
 
 function getUniversities(country) {

@@ -1,5 +1,5 @@
 import Dom from "./Dom.js";
-class University extends Dom {
+export default class University extends Dom {
   constructor(name, web_pages) {
     super();
     this.name = name;
@@ -8,7 +8,7 @@ class University extends Dom {
     this.render();
   }
   render() {
-    const article = this.createMarkup("article", "", document.querySelector("#universities"));
+    const article = this.createMarkup("article", "", document.querySelector("#universities"),[{name:"class", value:"border p-3 col-md-3"}]);
     this.createMarkup("h2", this.name, article);
     this.createMarkup("p", this.web_pages, article);
   }
